@@ -13,30 +13,30 @@
 
         /* ===== ПЕРЕМЕННЫЕ И ОСНОВНЫЕ СТИЛИ ===== */
         :root {
-            --primary-color: #0f172a;
-            --secondary-color: #1e293b;
-            --accent-color: #3b82f6;
-            --accent-hover: #2563eb;
-            --text-primary: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --border-color: #334155;
-            --success-color: #10b981;
-            --card-bg: #1a202c;
-            --modal-bg: #111827;
+            --primary-color: #ffffff;
+            --secondary-color: #f5f5f5;
+            --accent-color: #e60023;
+            --accent-hover: #ad081b;
+            --text-primary: #111111;
+            --text-secondary: #767676;
+            --border-color: #e5e5e5;
+            --success-color: #1aab1a;
+            --card-bg: #ffffff;
+            --modal-bg: #ffffff;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         html, body {
             height: 100%;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1a202c 100%);
+            background: #ffffff;
             color: var(--text-primary);
             overflow-x: hidden;
         }
 
         /* ===== ХЕДЕР ===== */
         header {
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
             padding: 1.5rem 0;
@@ -44,6 +44,7 @@
             top: 0;
             z-index: 100;
             animation: slideDown 0.6s ease-out;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
 
         @keyframes slideDown {
@@ -69,7 +70,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-color) 0%, #60a5fa 100%);
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ff4458 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -116,7 +117,7 @@
             height: 40px;
             background: var(--secondary-color);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 24px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -125,7 +126,7 @@
         }
 
         .cart-btn:hover {
-            background: var(--accent-color);
+            background: #f0f0f0;
             border-color: var(--accent-color);
             transform: translateY(-2px);
         }
@@ -210,14 +211,14 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent-color) 0%, #2563eb 100%);
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ff4458 100%);
             color: white;
-            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 8px 16px rgba(230, 0, 35, 0.2);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 12px 24px rgba(230, 0, 35, 0.3);
         }
 
         .btn-secondary {
@@ -250,8 +251,8 @@
             padding: 0.5rem 1rem;
             background: var(--secondary-color);
             border: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            border-radius: 6px;
+            color: var(--text-primary);
+            border-radius: 24px;
             cursor: pointer;
             transition: var(--transition);
             font-size: 0.9rem;
@@ -281,8 +282,8 @@
         /* ===== КАРТОЧКА ТОВАРА ===== */
         .product-card {
             background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border: none;
+            border-radius: 16px;
             overflow: hidden;
             transition: var(--transition);
             cursor: pointer;
@@ -290,6 +291,7 @@
             flex-direction: column;
             height: 100%;
             animation: scaleIn 0.5s ease-out;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         @keyframes scaleIn {
@@ -304,15 +306,15 @@
         }
 
         .product-card:hover {
-            border-color: var(--accent-color);
+            border-color: transparent;
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         .product-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #0f172a 100%);
+            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -375,7 +377,7 @@
         .product-price {
             font-size: 1.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-color) 0%, #60a5fa 100%);
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ff4458 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -386,7 +388,7 @@
             background: var(--accent-color);
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 24px;
             cursor: pointer;
             font-size: 0.875rem;
             font-weight: 600;
@@ -439,6 +441,7 @@
             gap: 2rem;
             padding: 2rem;
             animation: slideUp 0.3s ease-out;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         @keyframes slideUp {
@@ -468,13 +471,13 @@
             height: 40px;
             background: var(--secondary-color);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            color: var(--text-secondary);
+            color: var(--text-primary);
             transition: var(--transition);
             z-index: 1001;
         }
@@ -494,7 +497,7 @@
         .carousel-main {
             width: 100%;
             height: 300px;
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #0f172a 100%);
+            background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -536,12 +539,12 @@
             height: 50px;
             background: var(--secondary-color);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-secondary);
+            color: var(--text-primary);
             font-size: 1.2rem;
             transition: var(--transition);
         }
@@ -670,7 +673,7 @@
         .modal-price {
             font-size: 2.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-color) 0%, #60a5fa 100%);
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ff4458 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -680,20 +683,20 @@
         .modal-buy-btn {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(135deg, var(--accent-color) 0%, #2563eb 100%);
+            background: linear-gradient(135deg, var(--accent-color) 0%, #ff4458 100%);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 24px;
             font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
             transition: var(--transition);
-            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 8px 16px rgba(230, 0, 35, 0.2);
         }
 
         .modal-buy-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 12px 24px rgba(230, 0, 35, 0.3);
         }
 
         /* ===== FOOTER ===== */
@@ -949,7 +952,7 @@
                 category: 'Tools',
                 shortDesc: 'High-performance UI components library',
                 fullDesc: 'A comprehensive collection of professionally designed React components optimized for performance and accessibility. Includes documentation, examples, and TypeScript support.',
-                price: '$79.00',
+                price: '₽ 5 490',
                 image: '🚀',
                 images: ['🚀', '⚡', '💻', '🎨'], // Эмодзи для примера, замените на пути к изображениям
                 features: [
@@ -966,7 +969,7 @@
                 category: 'Templates',
                 shortDesc: 'Modern responsive website template',
                 fullDesc: 'Professional WordPress theme with modern design, fast loading times, and SEO optimization. Perfect for agencies, portfolios, and small businesses.',
-                price: '$49.00',
+                price: '₽ 3 490',
                 image: '🎨',
                 images: ['🎨', '🖼️', '✨', '🌐'],
                 features: [
@@ -983,7 +986,7 @@
                 category: 'Courses',
                 shortDesc: 'Complete JavaScript mastery course',
                 fullDesc: 'Learn JavaScript from basics to advanced concepts. Includes 50+ hours of video content, practical projects, and lifetime access to updated materials.',
-                price: '$129.00',
+                price: '₽ 8 990',
                 image: '📚',
                 images: ['📚', '🎓', '💡', '🔧'],
                 features: [
@@ -1000,7 +1003,7 @@
                 category: 'Tools',
                 shortDesc: 'Essential tools for web developers',
                 fullDesc: 'All-in-one toolkit containing utility libraries, code generators, and productivity tools. Increase your development speed by 50% or more.',
-                price: '$99.00',
+                price: '₽ 6 990',
                 image: '🔧',
                 images: ['🔧', '⚙️', '🛠️', '💻'],
                 features: [
@@ -1017,7 +1020,7 @@
                 category: 'Templates',
                 shortDesc: 'Full-featured online store template',
                 fullDesc: 'Complete e-commerce solution with product management, payment integration, and inventory tracking. Built with latest technologies.',
-                price: '$199.00',
+                price: '₽ 13 990',
                 image: '🛒',
                 images: ['🛒', '💳', '📊', '🚚'],
                 features: [
@@ -1034,7 +1037,7 @@
                 category: 'Tools',
                 shortDesc: 'Complete design system for teams',
                 fullDesc: 'Professional design system with components, patterns, and guidelines. Save hundreds of hours in design and development.',
-                price: '$159.00',
+                price: '₽ 11 290',
                 image: '🎨',
                 images: ['🎨', '✏️', '🖌️', '📐'],
                 features: [
